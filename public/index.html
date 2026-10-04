@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101923">
+  <meta name="description" content="An independent renewable energy intelligence prototype with row-level provenance to a bounded archive of CEA-published daily reports. Not live or endorsed by CEA.">
+  <title>RE-PREDICT · Energy intelligence</title>
+  <link rel="stylesheet" href="/styles.css?v=0.2.0">
+  <script defer src="/app.js?v=0.2.0"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#overview" aria-label="RE-PREDICT home" data-view="overview">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M20 3.5v5.2M20 31.3v5.2M3.5 20h5.2M31.3 20h5.2M8.3 8.3l3.7 3.7m16 16 3.7 3.7m0-23.4L28 12m-16 16-3.7 3.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="20" cy="20" r="7.5" stroke="currentColor" stroke-width="1.8"/><path d="m16.5 20.5 2.3 2.2 5-5.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="brand-copy"><strong>RE<span>·</span>PREDICT</strong><small>ENERGY INTELLIGENCE</small></span>
+      </a>
+
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="primary-nav" aria-label="Workspace">
+        <button class="nav-item is-active" data-view="overview"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3.4" y="3.4" width="7.1" height="7.1" rx="1.7"/><rect x="13.5" y="3.4" width="7.1" height="4.2" rx="1.7"/><rect x="13.5" y="10" width="7.1" height="10.6" rx="1.7"/><rect x="3.4" y="13" width="7.1" height="7.6" rx="1.7"/></svg></span><span>Overview</span><span class="nav-index">01</span></button>
+        <button class="nav-item" data-view="explore"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3.5 18.6 8.7 13l3.7 3.1 7.9-9"/><path d="M15.8 7.1h4.5v4.5"/><path d="M3.5 21h17"/></svg></span><span>Explore</span><span class="nav-index">02</span></button>
+        <button class="nav-item" data-view="forecast"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 18.5V5.8M4 18.5h16"/><path d="m6.4 14.9 3.7-3.7 3 2.2 5.3-6.8"/><path d="m15.8 6.6 2.7-.3-.1 2.8"/></svg></span><span>Forecast Lab</span><span class="nav-index">03</span></button>
+        <button class="nav-item" data-view="anomalies"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 3.2 21 19H3l9-15.8Z"/><path d="M12 9v4.7m0 2.7h.01"/></svg></span><span>Anomaly Desk</span><span class="nav-counter" id="nav-alert-count">—</span></button>
+        <button class="nav-item" data-view="scenarios"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 6.5h16M4 12h16M4 17.5h16"/><circle cx="9" cy="6.5" r="2.2"/><circle cx="15.5" cy="12" r="2.2"/><circle cx="7.5" cy="17.5" r="2.2"/></svg></span><span>Scenario Studio</span><span class="nav-index">05</span></button>
+        <button class="nav-item" data-view="carbon"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M20.2 4.1C12.9 3.4 6.2 5.1 4 10.3c-1.8 4.2 1 8.1 4.8 8.1 5.4 0 9.8-6.1 11.4-14.3Z"/><path d="M5.2 19.5c2.6-4.3 6.1-7.2 10.3-9.4"/></svg></span><span>Carbon Lens</span><span class="nav-index">06</span></button>
+        <button class="nav-item" data-view="analyst"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 9h8m-8 3.5h5"/><path d="m18.2 2.8.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7.7-1.8Z"/></svg></span><span>AI Analyst</span><span class="nav-index">07</span></button>
+      </nav>
+
+      <div class="sidebar-label sidebar-label-secondary">TRUST &amp; DATA</div>
+      <nav class="primary-nav" aria-label="Trust and data">
+        <button class="nav-item" data-view="sources"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M6 3.8h8l4 4v12.4H6V3.8Z"/><path d="M14 3.8v4.5h4M8.8 12h6.4m-6.4 3.4h6.4"/></svg></span><span>Sources &amp; Audit</span><span class="nav-index">08</span></button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="trust-card">
+        <div class="trust-card-orbit" aria-hidden="true"><span></span><i></i></div>
+        <div class="trust-overline">BUILT FOR TRACEABILITY</div>
+        <p>Every insight stays connected to its evidence.</p>
+        <button class="trust-link" data-view="sources">Review lineage <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="workspace-user"><span class="user-avatar">RP</span><span class="user-label"><strong>Demo workspace</strong><small>Local prototype</small></span><span class="user-menu" aria-hidden="true">···</span></div>
+    </aside>
+
+    <main class="main-shell">
+      <header class="topbar">
+        <div class="topbar-heading">
+          <button class="mobile-menu" id="mobile-menu" type="button" aria-label="Open navigation"><span></span><span></span><span></span></button>
+          <div class="breadcrumb"><span>RE-PREDICT</span><span class="breadcrumb-separator">/</span><span id="breadcrumb-current">OVERVIEW</span></div>
+          <div class="topbar-title" id="topbar-title">Energy overview</div>
+        </div>
+        <div class="topbar-tools">
+          <label class="toolbar-field" for="global-tech"><span>SERIES</span><select id="global-tech" aria-label="Select technology"><option value="all">All technologies</option></select></label>
+          <label class="toolbar-field window-field" for="global-window"><span>WINDOW</span><select id="global-window" aria-label="Select observation window"><option value="30">30 points</option><option value="60">60 points</option><option value="90">90 points</option><option value="all">All history</option></select></label>
+          <button class="dataset-pill" id="dataset-pill" type="button" data-action="go-sources" aria-label="View active dataset"><span class="pulse-dot"></span><span id="dataset-pill-text">Loading dataset</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m5 6 3 3 3-3"/></svg></button>
+          <button class="button button-primary top-import" type="button" data-action="import"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 13.5V3.8m0 0L6.5 7.2M10 3.8l3.5 3.4M4.2 12.3v3.1c0 .8.6 1.4 1.4 1.4h8.8c.8 0 1.4-.6 1.4-1.4v-3.1"/></svg><span>Import CSV</span></button>
+          <span class="api-indicator" id="api-indicator" title="Prototype API status"><span></span><b>API</b></span>
+        </div>
+      </header>
+
+      <section class="content-shell" aria-live="polite">
+        <div id="appRoot" class="app-root">
+          <div class="initial-loading"><div class="loader-ring"></div><p>Preparing your energy workspace…</p></div>
+        </div>
+      </section>
+      <footer class="footer-note"><span>RE-PREDICT · INDEPENDENT DECISION-SUPPORT PROTOTYPE</span><span>Observed ≠ predicted ≠ simulated</span></footer>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

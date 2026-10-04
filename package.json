@@ -1,0 +1,17 @@
+{
+  "name": "re-predict-prototype",
+  "version": "0.2.0",
+  "private": true,
+  "description": "A provenance-first renewable energy intelligence prototype with a checksummed CEA report snapshot.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test",
+    "check": "node --check server.js && node --check lib/seed.js && node --check lib/analytics.js && node --check lib/csv.js && node --check public/app.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

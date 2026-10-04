@@ -1,0 +1,16 @@
+# Runtime state and immutable raw uploads are local to each workspace
+/data/store.json
+/data/store.json.tmp
+/data/raw/*.csv
+!/data/raw/.gitkeep
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Logs
+npm-debug.log*
+*.log
